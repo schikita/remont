@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'viber' => [
+        'bot_token' => env('VIBER_BOT_TOKEN'),
+        'receiver_id' => env('VIBER_RECEIVER_ID'),
+    ],
+
 ];
