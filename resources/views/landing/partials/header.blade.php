@@ -10,9 +10,9 @@
     <div class="container-narrow flex items-center justify-between gap-4 py-3">
         <a href="{{ route('home') }}#hero" class="flex shrink-0 items-center text-slate-900">
             @if($logo)
-                <img src="{{ $logo }}" alt="{{ $site->site_name }}" class="h-9 w-auto" width="120" height="36" loading="eager">
+                <img src="{{ $logo }}" alt="{{ $site->site_name }}" class="h-12 w-auto" width="160" height="48" loading="eager">
             @else
-                <span class="rounded-lg bg-brand-700 px-2 py-1 text-sm font-semibold text-white">AP</span>
+                <span class="rounded-lg bg-brand-700 px-3 py-2 text-base font-semibold text-white">AP</span>
             @endif
         </a>
 

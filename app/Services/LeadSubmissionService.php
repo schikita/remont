@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class LeadSubmissionService
 {
+    public function __construct(
+        private readonly ViberLeadNotifier $viberNotifier,
+        private readonly EmailLeadNotifier $emailNotifier,
+    ) {}
+
     public function create(array $data, Request $request): Lead
     {
         $utm = [
@@ -18,7 +23,7 @@ class LeadSubmissionService
             'utm_content' => $request->query('utm_content'),
         ];
 
-        return Lead::query()->create([
+        $lead = Lead::query()->create([
             'name' => $data['name'],
             'phone' => $data['phone'],
             'comment' => $data['comment'] ?? null,
@@ -29,5 +34,10 @@ class LeadSubmissionService
             'status' => LeadStatus::New,
             ...$utm,
         ]);
+
+        $this->viberNotifier->send($lead);
+        $this->emailNotifier->send($lead);
+
+        return $lead;
     }
 }
