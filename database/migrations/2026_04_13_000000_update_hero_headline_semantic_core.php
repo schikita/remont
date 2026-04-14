@@ -10,7 +10,7 @@ return new class extends Migration
         'Сантехника без сюрпризов: срок, цена и чистота — в договоре',
     ];
 
-    private const string NEW_HEADLINE = 'Ремонт санузла под ключ в Минске — ванная, туалет, плитка и цена в смете';
+    private const string NEW_HEADLINE = 'Ремонт санузла под ключ в Минске — ванная, туалет, плитка';
 
     public function up(): void
     {

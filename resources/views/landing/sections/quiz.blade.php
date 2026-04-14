@@ -1,15 +1,14 @@
 @php
-    use App\Support\SectionGradient;
+use App\Support\SectionGradient;
 @endphp
 <section
     id="quiz"
     class="border-y border-slate-200 py-20 {{ SectionGradient::sectionClasses($sectionPreset ?? null) }}"
     x-data="quizWizard()"
-    x-init="load()"
->
+    x-init="load()">
     <div class="container-narrow">
         <h2 class="section-title">Подберём сценарий «под ключ» за минуту</h2>
-        <p class="section-lead">Санузел под ключ, плитка с ценой в смете или выезд плиточника — без обязательства заказать.</p>
+        <p class="section-lead">Санузел под ключ, плитка и сантехника.</p>
 
         <div class="mt-10 grid gap-8 lg:grid-cols-2">
             <div class="card">
@@ -22,8 +21,7 @@
                                 <button
                                     type="button"
                                     class="flex w-full items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm font-medium text-slate-800 transition hover:border-brand-300 hover:bg-brand-50/60"
-                                    @click="pick(opt.id)"
-                                >
+                                    @click="pick(opt.id)">
                                     <span x-text="opt.label"></span>
                                     <span class="text-slate-400">→</span>
                                 </button>
@@ -53,10 +51,10 @@
                 <p class="mt-2 text-sm text-slate-300">Прикрепите снимки в мессенджер — инженер оценит объём и озвучит вилку бюджета.</p>
                 <div class="mt-6 space-y-2 text-sm">
                     @if($contact->telegram_url)
-                        <a class="block rounded-xl bg-white/10 px-4 py-2 font-medium hover:bg-white/15" href="{{ $contact->telegram_url }}" target="_blank" rel="noopener">Telegram</a>
+                    <a class="block rounded-xl bg-white/10 px-4 py-2 font-medium hover:bg-white/15" href="{{ $contact->telegram_url }}" target="_blank" rel="noopener">Telegram</a>
                     @endif
                     @if($contact->whatsapp_url)
-                        <a class="block rounded-xl bg-white/10 px-4 py-2 font-medium hover:bg-white/15" href="{{ $contact->whatsapp_url }}" target="_blank" rel="noopener">WhatsApp</a>
+                    <a class="block rounded-xl bg-white/10 px-4 py-2 font-medium hover:bg-white/15" href="{{ $contact->whatsapp_url }}" target="_blank" rel="noopener">WhatsApp</a>
                     @endif
                 </div>
             </div>
