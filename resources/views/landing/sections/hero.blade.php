@@ -19,8 +19,20 @@
     @else
         <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_top,_rgba(20,184,166,0.42),_transparent_58%)]"></div>
     @endif
-    <div class="container-narrow relative grid gap-12 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
+    <div class="container-narrow relative grid gap-12 pt-4 pb-16 lg:grid-cols-2 lg:items-center lg:py-24">
         <div>
+            @if($contact->phone)
+                <div class="flex justify-center lg:hidden">
+                    <a
+                        href="tel:{{ preg_replace('/\D+/', '', $contact->phone) }}"
+                        style="margin-top: 30px; margin-bottom: 30px;"
+                        class="inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-white/90 px-4 py-2 text-lg font-bold text-brand-800 shadow-sm ring-1 ring-brand-100"
+                    >
+                        <span aria-hidden="true">📞</span>
+                        <span>{{ $contact->phone }}</span>
+                    </a>
+                </div>
+            @endif
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-700">Ремонт санузла и ванной под ключ · Минск, Минский район, область</p>
             <h1 class="mt-4 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">{{ $hero->headline }}</h1>
             @if($hero->subheadline)
@@ -51,6 +63,7 @@
                     @endforeach
                 </ul>
             @endif
+
         </div>
         @if($hero->show_lead_form)
             <div class="card relative">
