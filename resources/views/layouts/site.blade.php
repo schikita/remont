@@ -36,12 +36,25 @@
     @endif
 
     {!! $scripts->head() !!}
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108730773', 'ym');
+
+        ym(108730773, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <!-- /Yandex.Metrika counter -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('meta')
     <script type="application/ld+json">{!! $jsonLd ?? '{}' !!}</script>
 </head>
 <body class="min-w-[320px] font-sans">
 {!! $scripts->bodyStart() !!}
+<noscript><div><img src="https://mc.yandex.ru/watch/108730773" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
 @yield('content')
 
