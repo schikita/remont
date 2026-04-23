@@ -38,7 +38,7 @@
             @if($contact->phone)
                 <p class="mt-3 text-lg font-semibold"><a class="hover:text-brand-200" href="tel:{{ preg_replace('/\D+/', '', $contact->phone) }}">{{ $contact->phone }}</a></p>
             @endif
-            <a class="btn-primary mt-4 inline-flex bg-brand-500 hover:bg-brand-400" href="#hero">{{ $site->footer_cta_label ?? 'Заявка' }}</a>
+            <a class="btn-primary mt-4 inline-flex bg-brand-500 hover:bg-brand-400" href="{{ request()->routeIs('home') ? '#hero' : route('home') . '#hero' }}">{{ $site->footer_cta_label ?? 'Заявка' }}</a>
             <div class="mt-4 text-sm text-slate-300">
                 <p>Литвинов К. Г.</p>
                 <p>УНП АН0939154</p>

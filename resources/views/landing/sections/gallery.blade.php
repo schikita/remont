@@ -6,9 +6,9 @@
 <section id="gallery" class="py-20 {{ SectionGradient::sectionClasses($sectionPreset ?? null) }}">
     <div class="container-narrow">
         <h2 class="section-title">Примеры работ</h2>
-        <p class="section-lead">Фото с объектов: санузел и ванная под ключ, плитка, швы и готовые интерьеры. Загрузите свои снимки в админке («Галерея»).</p>
+        <p class="section-lead">Фото с объектов: санузел и ванная под ключ, плитка, швы и готовые интерьеры.</p>
         @if($gallery->isEmpty())
-            <p class="mt-8 text-sm text-slate-600">Добавьте примеры работ в разделе «Галерея» в админке — они появятся здесь.</p>
+            <p class="mt-8 text-sm text-slate-600">Собираем актуальные фото с объектов — скоро здесь появятся новые примеры работ.</p>
         @else
             <div class="mt-12 columns-1 gap-4 sm:columns-2 lg:columns-3">
                 @foreach($gallery as $item)

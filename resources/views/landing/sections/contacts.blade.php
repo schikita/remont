@@ -27,10 +27,10 @@
             </div>
         </div>
         <div class="card">
-            <h3 class="text-lg font-semibold text-slate-900">Заявка</h3>
-            <p class="mt-1 text-sm text-slate-600">Укажите удобное время звонка — перезвоним.</p>
+            <h3 class="text-lg font-semibold text-slate-900">Быстрая заявка</h3>
+            <p class="mt-1 text-sm text-slate-600">Перезвоним за 10-15 минут в рабочее время.</p>
             <div class="mt-4">
-                <x-lead-form form-source="contacts" />
+                <x-lead-form form-source="contacts" compact />
             </div>
         </div>
     </div>

@@ -28,8 +28,8 @@
                     <img src="{{ MediaUrl::public($about->image_path) }}" alt="" class="rounded-3xl object-cover shadow-lg ring-1 ring-slate-200/80" loading="lazy" width="640" height="720">
                 @else
                     <div class="aspect-[4/5] rounded-3xl bg-gradient-to-br from-brand-100 to-brand-300 p-10 text-slate-900 shadow-inner">
-                        <p class="text-lg font-semibold">Инженерный подход к бытовой сантехнике</p>
-                        <p class="mt-3 text-sm text-slate-800/80">Чистая геометрия трубопроводов, продуманный сервисный зазор, аккуратные фитинги.</p>
+                        <p class="text-lg font-semibold">Профессиональный подход к ремонту ванной и санузла</p>
+                        <p class="mt-3 text-sm text-slate-800/80">Точная геометрия, аккуратные примыкания и контроль качества на каждом этапе работ.</p>
                     </div>
                 @endif
             </div>

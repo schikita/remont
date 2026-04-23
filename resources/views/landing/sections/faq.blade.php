@@ -4,7 +4,7 @@
 <section id="faq" class="py-20 {{ SectionGradient::sectionClasses($sectionPreset ?? null) }}">
     <div class="container-narrow max-w-3xl">
         <h2 class="section-title">Вопросы и ответы</h2>
-        <p class="section-lead">Смета, цена под ключ и сроки — если не нашли ответ, напишите в мессенджер.</p>
+        <p class="section-lead">Отвечаем на главные вопросы по срокам, стоимости и этапам работ. Если не нашли нужное — оставьте заявку, подскажем персонально.</p>
         <div class="mt-10 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
             @foreach($faq as $item)
                 <details class="group px-5 py-4">

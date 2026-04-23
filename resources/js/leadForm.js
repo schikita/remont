@@ -4,6 +4,7 @@ export default function leadForm(config) {
     return {
         sending: false,
         ok: false,
+        showThanks: false,
         message: '',
         errors: {},
         fields: {
@@ -19,6 +20,7 @@ export default function leadForm(config) {
         async submit() {
             this.errors = {};
             this.ok = false;
+            this.showThanks = false;
             this.message = '';
             this.sending = true;
 
@@ -48,6 +50,7 @@ export default function leadForm(config) {
 
                 this.ok = true;
                 this.message = data.message ?? 'Заявка принята.';
+                this.showThanks = true;
                 this.fields.name = '';
                 this.fields.phone = '';
                 this.fields.comment = '';

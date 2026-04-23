@@ -8,7 +8,7 @@ use App\Support\SectionGradient;
     x-init="load()">
     <div class="container-narrow">
         <h2 class="section-title">Подберём сценарий «под ключ» за минуту</h2>
-        <p class="section-lead">Санузел под ключ, плитка и сантехника.</p>
+        <p class="section-lead">Ответьте на несколько вопросов и получите подходящий сценарий работ и ориентир по бюджету.</p>
 
         <div class="mt-10 grid gap-8 lg:grid-cols-2">
             <div class="card">

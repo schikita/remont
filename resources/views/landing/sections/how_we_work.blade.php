@@ -4,7 +4,7 @@
 <section id="how" class="py-20 {{ SectionGradient::sectionClasses($sectionPreset ?? null) }}">
     <div class="container-narrow">
         <h2 class="section-title">Как мы работаем</h2>
-        <p class="section-lead">От заявки до сдачи санузла под ключ — замер, смета со стоимостью ремонта и укладки плитки, работы и акт.</p>
+        <p class="section-lead">От первого звонка до сдачи объекта: выезд на замер, понятная смета, поэтапный контроль качества и результат в согласованные сроки.</p>
         <ol class="mt-12 grid gap-6 md:grid-cols-2">
             @foreach($workSteps as $i => $step)
                 <li class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
